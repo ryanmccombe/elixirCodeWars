@@ -8,7 +8,7 @@ defmodule NumGenerator do
 
   Task
   Implement a function named
-  
+
   generate_range(2, 10, 2) # should return array of [2,4,6,8,10]
   generate_range(1, 10, 3) # should return array of [1,4,7,10]
 
@@ -17,6 +17,9 @@ defmodule NumGenerator do
   the third is step.
   """
   def generate_range(min, max, step) do
-    #TODO ...
+    Enum.to_list(min..max)
+    |> Enum.filter(fn(number) ->
+      rem(number - min, step) == 0
+    end)
   end
 end
