@@ -19,6 +19,6 @@ defmodule Cashier do
   Good luck! Your team knows they can count on you!
   """
   def format_money(amount) do
-    "$#{:erlang.float_to_binary(amount/1, decimals: 2)}"
+    "$#{:erlang.float_to_binary(amount, decimals: 2)}"
   end
 end
