@@ -8,6 +8,6 @@ defmodule Evenator do
   Floats are considered UNeven for this kata.
   """
   def even?(n) do
-
+    is_integer(n) and rem(n, 2) == 0
   end
 end
