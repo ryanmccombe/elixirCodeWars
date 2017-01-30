@@ -22,4 +22,10 @@ defmodule NumGenerator do
       rem(number - min, step) == 0
     end)
   end
+
+  # Better solutions: elixir has built in methods for this:
+  #   :lists.seq(min, max, step)
+  # or
+  #   Enum.take_every(min..max,step)
+
 end
