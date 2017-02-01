@@ -11,7 +11,7 @@ defmodule Opposites do
   true if they are in love and false if they aren't.
   """
   require Integer
-  def inlove?(flower1, flower2) when Integer.is_odd(flower1) and Integer.is_odd(flower2), do: false
-  def inlove?(flower1, flower2) when Integer.is_even(flower1) and Integer.is_even(flower2), do: false
-  def inlove?(flower1, flower2), do: true
+  def inlove?(flower1, flower2) do
+    Integer.is_even(flower1) != Integer.is_even(flower2)
+  end
 end
