@@ -10,7 +10,8 @@ defmodule Opposites do
   Write a function that will take the number of petals of each flower and return
   true if they are in love and false if they aren't.
   """
-  def inlove?(flower1, flower2) do
-    # TODO
-  end
+  require Integer
+  def inlove?(flower1, flower2) when Integer.is_odd(flower1) and Integer.is_odd(flower2), do: false
+  def inlove?(flower1, flower2) when Integer.is_even(flower1) and Integer.is_even(flower2), do: false
+  def inlove?(flower1, flower2), do: true
 end
