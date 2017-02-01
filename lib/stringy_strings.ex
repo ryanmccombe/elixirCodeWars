@@ -13,7 +13,8 @@ defmodule OneZeroSequencer do
 
   The size will always be positive and will only use whole numbers.
   """
+  require Integer
   def stringy(size) do
-    #TODO ...
+    List.to_string(for i <- 1..size, do: Integer.to_string(rem(i, 2)))
   end
 end
