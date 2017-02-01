@@ -17,4 +17,11 @@ defmodule OneZeroSequencer do
   def stringy(size) do
     List.to_string(for i <- 1..size, do: Integer.to_string(rem(i, 2)))
   end
+
+  # Alternatively
+  # def stringy(size) do
+  #   Stream.cycle([1,0])
+  #   |> Enum.take(size)
+  #   |> Enum.join
+  # end
 end
